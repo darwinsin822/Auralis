@@ -1,8 +1,14 @@
 # 🎵 Auralis Music para Android (v1.8.0)
 
+[![Descargar APK](https://img.shields.io/badge/Descargar%20APK%20(v1.8.0)-Android%207.0+-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/darwinsin822/Auralis/releases/latest/download/Auralis_1.8.0_LocalFolders_Signed.apk)
 [![Latest Release](https://img.shields.io/github/v/release/darwinsin822/Auralis?style=for-the-badge&labelColor=0d1117)](https://github.com/darwinsin822/Auralis/releases)
 [![License](https://img.shields.io/github/license/darwinsin822/Auralis?style=for-the-badge&labelColor=0d1117)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android_7.0+_(API_24+)--36-brightgreen.svg?style=for-the-badge&labelColor=0d1117)](https://github.com/darwinsin822/Auralis)
+
+> 📲 **¿Quieres instalar Auralis en tu celular?**  
+> 👉 **[Descarga Directa del APK v1.8.0 (5.7 MB)](https://github.com/darwinsin822/Auralis/releases/latest/download/Auralis_1.8.0_LocalFolders_Signed.apk)** *(Instalación rápida en 1 clic)*
+
+---
 
 Reproductor de música nativo para Android diseñado con **Jetpack Compose** y **Material Design 3**, optimizado para la gestión y reproducción fluida de carpetas locales de audio, descargas y sesiones de audio en segundo plano mediante **AndroidX Media3**.
 
@@ -10,9 +16,10 @@ Reproductor de música nativo para Android diseñado con **Jetpack Compose** y *
 
 ## 📥 Descarga Directa del APK
 
-Puedes descargar el archivo APK listo para instalar en tu teléfono móvil directamente desde la sección de lanzamientos:
+Puedes descargar el archivo APK listo para instalar en tu teléfono móvil con un solo clic:
 
-👉 **[Descargar Auralis_1.8.0_LocalFolders_Signed.apk (Releases)](https://github.com/darwinsin822/Auralis/releases)**
+👉 **[Descargar Auralis_1.8.0_LocalFolders_Signed.apk Directo](https://github.com/darwinsin822/Auralis/releases/latest/download/Auralis_1.8.0_LocalFolders_Signed.apk)** *(5.7 MB)*  
+*(O revisa todos los lanzamientos en la [sección de Releases](https://github.com/darwinsin822/Auralis/releases))*
 
 ---
 
