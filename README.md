@@ -33,6 +33,15 @@ Puedes descargar el archivo APK listo para instalar en tu teléfono móvil con u
 
 ---
 
+## 📱 Capturas de pantalla
+
+<div align="center">
+  <img src="./screenshots/inicio.jpg" alt="Pantalla Inicio" width="45%" />
+  <img src="./screenshots/biblioteca.jpg" alt="Pantalla Biblioteca" width="45%" />
+</div>
+
+---
+
 ## 🛠️ Compilación y Modificación
 
 El proyecto está preparado para su modificación y reempaquetado abierto mediante **Apktool**:
