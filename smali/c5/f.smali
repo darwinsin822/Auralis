@@ -1571,38 +1571,8 @@
 
     .line 229
     :goto_3
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-static {v0, v5}, Lc5/h;->k(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 230
-    .line 231
-    const-string v4, "https://img.youtube.com/vi/"
-
-    .line 232
-    .line 233
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 234
-    .line 235
-    .line 236
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 237
-    .line 238
-    .line 239
-    const-string v4, "/hqdefault.jpg"
-
-    .line 240
-    .line 241
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 242
-    .line 243
-    .line 244
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 245
-    .line 246
-    .line 247
     move-result-object v19
 
     .line 248

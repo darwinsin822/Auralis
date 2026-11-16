@@ -961,22 +961,6 @@
     .line 269
     if-eqz v14, :cond_6
 
-    .line 270
-    .line 271
-    const-string v15, "musicResponsiveListItemRenderer"
-
-    .line 272
-    .line 273
-    invoke-virtual {v14, v15}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 274
-    .line 275
-    .line 276
-    move-result-object v14
-
-    .line 277
-    if-eqz v14, :cond_6
-
     .line 278
     .line 279
     invoke-static {v14}, Lc5/h;->f(Lorg/json/JSONObject;)Lcom/example/auralis/model/Track;

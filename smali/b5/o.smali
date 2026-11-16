@@ -1023,25 +1023,8 @@
     .line 276
     if-eqz v13, :cond_6
 
-    .line 277
-    .line 278
-    const-string v14, "musicTwoRowItemRenderer"
-
-    .line 279
-    .line 280
-    invoke-virtual {v13, v14}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 281
-    .line 282
-    .line 283
-    move-result-object v13
-
-    .line 284
-    if-eqz v13, :cond_6
-
-    .line 285
     .line 286
-    invoke-static {v3, v13}, Lc5/h;->a(Lc5/h;Lorg/json/JSONObject;)Lcom/example/auralis/model/Track;
+    invoke-static {v13}, Lc5/h;->f(Lorg/json/JSONObject;)Lcom/example/auralis/model/Track;
 
     .line 287
     .line 288

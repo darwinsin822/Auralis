@@ -132,483 +132,13 @@
 .end method
 
 .method public static final a(Lc5/h;Lorg/json/JSONObject;)Lcom/example/auralis/model/Track;
-    .locals 27
+    .locals 0
 
-    .line 1
-    move-object/from16 v0, p1
+    invoke-static {p1}, Lc5/h;->f(Lorg/json/JSONObject;)Lcom/example/auralis/model/Track;
 
-    .line 2
-    .line 3
-    const-string v1, "yt_"
+    move-result-object p0
 
-    .line 4
-    .line 5
-    const-string v2, "https://img.youtube.com/vi/"
-
-    .line 6
-    .line 7
-    const/4 v3, 0x0
-
-    .line 8
-    :try_start_0
-    const-string v4, "navigationEndpoint"
-
-    .line 9
-    .line 10
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v4
-
-    .line 14
-    if-eqz v4, :cond_6
-
-    .line 15
-    .line 16
-    const-string v5, "watchEndpoint"
-
-    .line 17
-    .line 18
-    invoke-virtual {v4, v5}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v4
-
-    .line 22
-    if-eqz v4, :cond_6
-
-    .line 23
-    .line 24
-    const-string v5, "videoId"
-
-    .line 25
-    .line 26
-    const-string v6, ""
-
-    .line 27
-    .line 28
-    invoke-virtual {v4, v5, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v4
-
-    .line 32
-    if-eqz v4, :cond_6
-
-    .line 33
-    .line 34
-    invoke-static {v4}, Lj6/f;->i0(Ljava/lang/CharSequence;)Z
-
-    .line 35
-    .line 36
-    .line 37
-    move-result v5
-
-    .line 38
-    if-eqz v5, :cond_0
-
-    .line 39
-    .line 40
-    goto/16 :goto_4
-
-    .line 41
-    .line 42
-    :cond_0
-    const-string v5, "title"
-
-    .line 43
-    .line 44
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 45
-    .line 46
-    .line 47
-    move-result-object v5
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 48
-    const-string v6, "Unknown"
-
-    .line 49
-    .line 50
-    const-string v7, "text"
-
-    .line 51
-    .line 52
-    const/4 v8, 0x0
-
-    .line 53
-    const-string v9, "runs"
-
-    .line 54
-    .line 55
-    if-eqz v5, :cond_1
-
-    .line 56
-    .line 57
-    :try_start_1
-    invoke-virtual {v5, v9}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    .line 58
-    .line 59
-    .line 60
-    move-result-object v5
-
-    .line 61
-    if-eqz v5, :cond_1
-
-    .line 62
-    .line 63
-    invoke-virtual {v5, v8}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    .line 64
-    .line 65
-    .line 66
-    move-result-object v5
-
-    .line 67
-    if-eqz v5, :cond_1
-
-    .line 68
-    .line 69
-    invoke-virtual {v5, v7, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 70
-    .line 71
-    .line 72
-    move-result-object v5
-
-    .line 73
-    if-eqz v5, :cond_1
-
-    .line 74
-    .line 75
-    move-object v12, v5
-
-    .line 76
-    goto :goto_0
-
-    .line 77
-    :cond_1
-    move-object v12, v6
-
-    .line 78
-    :goto_0
-    const-string v5, "subtitle"
-
-    .line 79
-    .line 80
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 81
-    .line 82
-    .line 83
-    move-result-object v5
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 84
-    const-string v6, "YouTube"
-
-    .line 85
-    .line 86
-    if-eqz v5, :cond_2
-
-    .line 87
-    .line 88
-    :try_start_2
-    invoke-virtual {v5, v9}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    .line 89
-    .line 90
-    .line 91
-    move-result-object v5
-
-    .line 92
-    if-eqz v5, :cond_2
-
-    .line 93
-    .line 94
-    invoke-virtual {v5, v8}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    .line 95
-    .line 96
-    .line 97
-    move-result-object v5
-
-    .line 98
-    if-eqz v5, :cond_2
-
-    .line 99
-    .line 100
-    invoke-virtual {v5, v7, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 101
-    .line 102
-    .line 103
-    move-result-object v5
-
-    .line 104
-    if-eqz v5, :cond_2
-
-    .line 105
-    .line 106
-    move-object v13, v5
-
-    .line 107
-    goto :goto_1
-
-    .line 108
-    :cond_2
-    move-object v13, v6
-
-    .line 109
-    :goto_1
-    const-string v5, "thumbnailRenderer"
-
-    .line 110
-    .line 111
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 112
-    .line 113
-    .line 114
-    move-result-object v0
-
-    .line 115
-    if-eqz v0, :cond_3
-
-    .line 116
-    .line 117
-    const-string v5, "musicThumbnailRenderer"
-
-    .line 118
-    .line 119
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 120
-    .line 121
-    .line 122
-    move-result-object v0
-
-    .line 123
-    if-eqz v0, :cond_3
-
-    .line 124
-    .line 125
-    const-string v5, "thumbnail"
-
-    .line 126
-    .line 127
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 128
-    .line 129
-    .line 130
-    move-result-object v0
-
-    .line 131
-    if-eqz v0, :cond_3
-
-    .line 132
-    .line 133
-    const-string v5, "thumbnails"
-
-    .line 134
-    .line 135
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    .line 136
-    .line 137
-    .line 138
-    move-result-object v0
-
-    .line 139
-    goto :goto_2
-
-    .line 140
-    :cond_3
-    move-object v0, v3
-
-    .line 141
-    :goto_2
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    .line 142
-    .line 143
-    invoke-direct {v5, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 144
-    .line 145
-    .line 146
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 147
-    .line 148
-    .line 149
-    const-string v2, "/hqdefault.jpg"
-
-    .line 150
-    .line 151
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 152
-    .line 153
-    .line 154
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 155
-    .line 156
-    .line 157
-    move-result-object v2
-
-    .line 158
-    if-eqz v0, :cond_5
-
-    .line 159
-    .line 160
-    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
-
-    .line 161
-    .line 162
-    .line 163
-    move-result v5
-
-    .line 164
-    if-lez v5, :cond_5
-
-    .line 165
-    .line 166
-    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
-
-    .line 167
-    .line 168
-    .line 169
-    move-result v5
-
-    .line 170
-    add-int/lit8 v5, v5, -0x1
-
-    .line 171
-    .line 172
-    invoke-virtual {v0, v5}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    .line 173
-    .line 174
-    .line 175
-    move-result-object v0
-
-    .line 176
-    if-eqz v0, :cond_5
-
-    .line 177
-    .line 178
-    const-string v5, "url"
-
-    .line 179
-    .line 180
-    invoke-virtual {v0, v5, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 181
-    .line 182
-    .line 183
-    move-result-object v0
-
-    .line 184
-    if-nez v0, :cond_4
-
-    .line 185
-    .line 186
-    goto :goto_3
-
-    .line 187
-    :cond_4
-    move-object v2, v0
-
-    .line 188
-    :cond_5
-    :goto_3
-    move-object/from16 v18, v2
-
-    .line 189
-    .line 190
-    new-instance v10, Lcom/example/auralis/model/Track;
-
-    .line 191
-    .line 192
-    invoke-virtual {v1, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 193
-    .line 194
-    .line 195
-    move-result-object v11
-
-    .line 196
-    const-string v14, "YouTube Trending"
-
-    .line 197
-    .line 198
-    const-string v17, ""
-
-    .line 199
-    .line 200
-    const-string v21, "YOUTUBE"
-
-    .line 201
-    .line 202
-    const-string v22, "YouTube \u00b7 Trending"
-
-    .line 203
-    .line 204
-    const/16 v25, 0x1900
-
-    .line 205
-    .line 206
-    const/16 v26, 0x0
-
-    .line 207
-    .line 208
-    const-wide/16 v15, 0x0
-
-    .line 209
-    .line 210
-    const/16 v19, 0x0
-
-    .line 211
-    .line 212
-    const/16 v20, 0x0
-
-    .line 213
-    .line 214
-    const/16 v23, 0x0
-
-    .line 215
-    .line 216
-    const/16 v24, 0x0
-
-    .line 217
-    .line 218
-    invoke-direct/range {v10 .. v26}, Lcom/example/auralis/model/Track;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/f;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    .line 219
-    .line 220
-    .line 221
-    return-object v10
-
-    .line 222
-    :catch_0
-    :cond_6
-    :goto_4
-    return-object v3
+    return-object p0
 .end method
 
 .method public static final b(Lc5/h;Ljava/lang/String;)Ljava/util/List;
@@ -1565,475 +1095,563 @@
 .method public static f(Lorg/json/JSONObject;)Lcom/example/auralis/model/Track;
     .locals 27
 
-    .line 1
     move-object/from16 v0, p0
 
-    .line 2
-    .line 3
-    const-string v1, "https://img.youtube.com/vi/"
+    if-nez v0, :cond_start
 
-    .line 4
-    .line 5
-    const-string v2, "yt_"
+    const/4 v0, 0x0
 
-    .line 6
-    .line 7
+    return-object v0
+
+    :cond_start
     :try_start_0
-    const-string v3, "overlay"
+    const-string v1, "musicTwoColumnItemRenderer"
 
-    .line 8
-    .line 9
-    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    .line 10
-    .line 11
-    .line 12
+    move-result-object v1
+
+    if-eqz v1, :cond_c1
+
+    move-object v0, v1
+
+    goto :cond_unwrapped
+
+    :cond_c1
+    const-string v1, "musicResponsiveListItemRenderer"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_c2
+
+    move-object v0, v1
+
+    goto :cond_unwrapped
+
+    :cond_c2
+    const-string v1, "musicTwoRowItemRenderer"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_unwrapped
+
+    move-object v0, v1
+
+    :cond_unwrapped
+    const-string v3, ""
+
+    const-string v1, "navigationEndpoint"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_check_plitem
+
+    const-string v2, "watchEndpoint"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    if-nez v2, :cond_ext_wep
+
+    const-string v2, "watchPlaylistEndpoint"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    :cond_ext_wep
+    if-eqz v2, :cond_check_plitem
+
+    const-string v1, "videoId"
+
+    invoke-virtual {v2, v1, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
     move-result-object v3
 
-    .line 13
-    if-eqz v3, :cond_4
+    :cond_check_plitem
+    if-eqz v3, :cond_check_plitem_real
 
-    .line 14
-    .line 15
-    const-string v4, "musicItemThumbnailOverlayRenderer"
-
-    .line 16
-    .line 17
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v3
-
-    .line 21
-    if-eqz v3, :cond_4
-
-    .line 22
-    .line 23
-    const-string v4, "content"
-
-    .line 24
-    .line 25
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v3
-
-    .line 29
-    if-eqz v3, :cond_4
-
-    .line 30
-    .line 31
-    const-string v4, "musicPlayButtonRenderer"
-
-    .line 32
-    .line 33
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v3
-
-    .line 37
-    if-eqz v3, :cond_4
-
-    .line 38
-    .line 39
-    const-string v4, "playNavigationEndpoint"
-
-    .line 40
-    .line 41
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 42
-    .line 43
-    .line 44
-    move-result-object v3
-
-    .line 45
-    if-eqz v3, :cond_4
-
-    .line 46
-    .line 47
-    const-string v4, "watchEndpoint"
-
-    .line 48
-    .line 49
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 50
-    .line 51
-    .line 52
-    move-result-object v3
-
-    .line 53
-    if-eqz v3, :cond_4
-
-    .line 54
-    .line 55
-    const-string v4, "videoId"
-
-    .line 56
-    .line 57
-    const-string v5, ""
-
-    .line 58
-    .line 59
-    invoke-virtual {v3, v4, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 60
-    .line 61
-    .line 62
-    move-result-object v3
-
-    .line 63
-    if-eqz v3, :cond_4
-
-    .line 64
-    .line 65
     invoke-static {v3}, Lj6/f;->i0(Ljava/lang/CharSequence;)Z
 
-    .line 66
-    .line 67
-    .line 68
+    move-result v1
+
+    if-eqz v1, :cond_got_vid
+
+    :cond_check_plitem_real
+    const-string v1, "playlistItemData"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_check_overlay
+
+    const-string v2, "videoId"
+
+    const-string v4, ""
+
+    invoke-virtual {v1, v2, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_check_overlay
+    if-eqz v3, :cond_check_overlay_real
+
+    invoke-static {v3}, Lj6/f;->i0(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_got_vid
+
+    :cond_check_overlay_real
+    const-string v1, "overlay"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-nez v1, :cond_check_overlay_btn
+
+    const-string v1, "thumbnailOverlay"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    :cond_check_overlay_btn
+    if-eqz v1, :cond_check_pto
+
+    const-string v2, "musicItemThumbnailOverlayRenderer"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_check_pto
+
+    const-string v2, "content"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_check_pto
+
+    const-string v2, "musicPlayButtonRenderer"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_check_pto
+
+    const-string v2, "playNavigationEndpoint"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_check_pto
+
+    const-string v2, "watchEndpoint"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_check_pto
+
+    const-string v2, "videoId"
+
+    const-string v4, ""
+
+    invoke-virtual {v1, v2, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_check_pto
+    if-eqz v3, :cond_check_pto_real
+
+    invoke-static {v3}, Lj6/f;->i0(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_got_vid
+
+    :cond_check_pto_real
+    const-string v1, "potentialThumbnailOverlays"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_vid
+
+    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
+
+    move-result v2
+
+    if-lez v2, :cond_got_vid
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_vid
+
+    const-string v2, "musicItemThumbnailOverlayRenderer"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_vid
+
+    const-string v2, "content"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_vid
+
+    const-string v2, "musicPlayButtonRenderer"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_vid
+
+    const-string v2, "playbackIdMatchers"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_vid
+
+    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
+
+    move-result v2
+
+    if-lez v2, :cond_got_vid
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_vid
+
+    const-string v2, "videoId"
+
+    const-string v4, ""
+
+    invoke-virtual {v1, v2, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_got_vid
+    if-eqz v3, :cond_null
+
+    invoke-static {v3}, Lj6/f;->i0(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_meta
+
+    goto/16 :cond_null
+
+    :cond_meta
+    invoke-static {v0, v3}, Lc5/h;->k(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v18
+
+    const-string v12, "Unknown"
+
+    const-string v1, "title"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_title_flex
+
+    const-string v2, "runs"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_title_simple
+
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
+
     move-result v4
 
-    .line 69
-    if-eqz v4, :cond_0
+    if-lez v4, :cond_title_simple
 
-    .line 70
-    .line 71
-    goto/16 :goto_2
-
-    .line 72
-    .line 73
-    :cond_0
-    const-string v4, "flexColumns"
-
-    .line 74
-    .line 75
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v0
-
-    .line 79
-    if-nez v0, :cond_1
-
-    .line 80
-    .line 81
-    goto/16 :goto_2
-
-    .line 82
-    .line 83
-    :cond_1
     const/4 v4, 0x0
 
-    .line 84
-    invoke-virtual {v0, v4}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+    invoke-virtual {v2, v4}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
-    .line 85
-    .line 86
-    .line 87
-    move-result-object v5
+    move-result-object v2
+
+    if-eqz v2, :cond_title_simple
+
+    const-string v4, "text"
+
+    invoke-virtual {v2, v4, v12}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v12
+
+    goto :cond_got_title
+
+    :cond_title_simple
+    const-string v2, "text"
+
+    invoke-virtual {v1, v2, v12}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v12
+
+    goto :cond_got_title
+
+    :cond_title_flex
+    const-string v1, "flexColumns"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_title
+
+    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
+
+    move-result v2
+
+    if-lez v2, :cond_got_title
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_title
+
+    const-string v2, "musicResponsiveListItemFlexColumnRenderer"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_title
+
+    const-string v2, "text"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_title
+
+    const-string v2, "runs"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_title
+
+    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
+
+    move-result v2
+
+    if-lez v2, :cond_got_title
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_got_title
+
+    const-string v2, "text"
+
+    invoke-virtual {v1, v2, v12}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v12
+
+    :cond_got_title
+    const-string v13, "YouTube"
+
+    const-string v1, "subtitle"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_artist_flex
+
+    const-string v2, "runs"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_artist_simple
+
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
+
+    move-result v4
+
+    if-lez v4, :cond_artist_simple
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v4}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_artist_simple
+
+    const-string v4, "text"
+
+    invoke-virtual {v2, v4, v13}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v13
+
+    goto :cond_got_artist
+
+    :cond_artist_simple
+    const-string v2, "text"
+
+    invoke-virtual {v1, v2, v13}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v13
+
+    goto :cond_got_artist
+
+    :cond_artist_flex
+    const-string v1, "flexColumns"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_got_artist
+
+    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-le v1, v2, :cond_got_artist
+
+    invoke-virtual {v0, v2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_got_artist
+
+    const-string v1, "musicResponsiveListItemFlexColumnRenderer"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_got_artist
+
+    const-string v1, "text"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_got_artist
+
+    const-string v1, "runs"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_got_artist
+
+    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
+
+    move-result v1
+
+    if-lez v1, :cond_got_artist
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_got_artist
+
+    const-string v1, "text"
+
+    invoke-virtual {v0, v1, v13}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v13
+
+    :cond_got_artist
+    new-instance v10, Lcom/example/auralis/model/Track;
+
+    const-string v0, "yt_"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v11
+
+    const-string v14, "YouTube Music"
+
+    const-wide/16 v15, 0x0
+
+    const-string v17, ""
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const-string v21, "YOUTUBE"
+
+    const-string v22, "YouTube \u00b7 Audio"
+
+    const/16 v23, 0x0
+
+    const/16 v24, 0x0
+
+    const/16 v25, 0x1900
+
+    const/16 v26, 0x0
+
+    invoke-direct/range {v10 .. v26}, Lcom/example/auralis/model/Track;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/f;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
-    const-string v6, "Unknown"
-
-    .line 89
-    .line 90
-    const-string v7, "runs"
-
-    .line 91
-    .line 92
-    const-string v8, "musicResponsiveListItemFlexColumnRenderer"
-
-    .line 93
-    .line 94
-    const-string v9, "text"
-
-    .line 95
-    .line 96
-    if-eqz v5, :cond_2
-
-    .line 97
-    .line 98
-    :try_start_1
-    invoke-virtual {v5, v8}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 99
-    .line 100
-    .line 101
-    move-result-object v5
-
-    .line 102
-    if-eqz v5, :cond_2
-
-    .line 103
-    .line 104
-    invoke-virtual {v5, v9}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 105
-    .line 106
-    .line 107
-    move-result-object v5
-
-    .line 108
-    if-eqz v5, :cond_2
-
-    .line 109
-    .line 110
-    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    .line 111
-    .line 112
-    .line 113
-    move-result-object v5
-
-    .line 114
-    if-eqz v5, :cond_2
-
-    .line 115
-    .line 116
-    invoke-virtual {v5, v4}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    .line 117
-    .line 118
-    .line 119
-    move-result-object v5
-
-    .line 120
-    if-eqz v5, :cond_2
-
-    .line 121
-    .line 122
-    invoke-virtual {v5, v9, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 123
-    .line 124
-    .line 125
-    move-result-object v5
-
-    .line 126
-    if-eqz v5, :cond_2
-
-    .line 127
-    .line 128
-    move-object v12, v5
-
-    .line 129
-    goto :goto_0
-
-    .line 130
-    :cond_2
-    move-object v12, v6
-
-    .line 131
-    :goto_0
-    const/4 v5, 0x1
-
-    .line 132
-    invoke-virtual {v0, v5}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    .line 133
-    .line 134
-    .line 135
-    move-result-object v0
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 136
-    const-string v5, "YouTube"
-
-    .line 137
-    .line 138
-    if-eqz v0, :cond_3
-
-    .line 139
-    .line 140
-    :try_start_2
-    invoke-virtual {v0, v8}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 141
-    .line 142
-    .line 143
-    move-result-object v0
-
-    .line 144
-    if-eqz v0, :cond_3
-
-    .line 145
-    .line 146
-    invoke-virtual {v0, v9}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    .line 147
-    .line 148
-    .line 149
-    move-result-object v0
-
-    .line 150
-    if-eqz v0, :cond_3
-
-    .line 151
-    .line 152
-    invoke-virtual {v0, v7}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    .line 153
-    .line 154
-    .line 155
-    move-result-object v0
-
-    .line 156
-    if-eqz v0, :cond_3
-
-    .line 157
-    .line 158
-    invoke-virtual {v0, v4}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    .line 159
-    .line 160
-    .line 161
-    move-result-object v0
-
-    .line 162
-    if-eqz v0, :cond_3
-
-    .line 163
-    .line 164
-    invoke-virtual {v0, v9, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 165
-    .line 166
-    .line 167
-    move-result-object v0
-
-    .line 168
-    if-eqz v0, :cond_3
-
-    .line 169
-    .line 170
-    move-object v13, v0
-
-    .line 171
-    goto :goto_1
-
-    .line 172
-    :cond_3
-    move-object v13, v5
-
-    .line 173
-    :goto_1
-    new-instance v10, Lcom/example/auralis/model/Track;
-
-    .line 174
-    .line 175
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 176
-    .line 177
-    .line 178
-    move-result-object v11
-
-    .line 179
-    const-string v14, "YouTube Music"
-
-    .line 180
-    .line 181
-    const-string v17, ""
-
-    .line 182
-    .line 183
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 184
-    .line 185
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 186
-    .line 187
-    .line 188
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 189
-    .line 190
-    .line 191
-    const-string v1, "/hqdefault.jpg"
-
-    .line 192
-    .line 193
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 194
-    .line 195
-    .line 196
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 197
-    .line 198
-    .line 199
-    move-result-object v18
-
-    .line 200
-    const-string v21, "YOUTUBE"
-
-    .line 201
-    .line 202
-    const-string v22, "YouTube \u00b7 Audio"
-
-    .line 203
-    .line 204
-    const/16 v25, 0x1900
-
-    .line 205
-    .line 206
-    const/16 v26, 0x0
-
-    .line 207
-    .line 208
-    const-wide/16 v15, 0x0
-
-    .line 209
-    .line 210
-    const/16 v19, 0x0
-
-    .line 211
-    .line 212
-    const/16 v20, 0x0
-
-    .line 213
-    .line 214
-    const/16 v23, 0x0
-
-    .line 215
-    .line 216
-    const/16 v24, 0x0
-
-    .line 217
-    .line 218
-    invoke-direct/range {v10 .. v26}, Lcom/example/auralis/model/Track;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/f;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    .line 219
-    .line 220
-    .line 221
     return-object v10
 
-    .line 222
     :catch_0
-    :cond_4
-    :goto_2
+    :cond_null
     const/4 v0, 0x0
 
-    .line 223
     return-object v0
 .end method
 
@@ -4704,4 +4322,145 @@
     .line 229
     .line 230
     return-object v1
+.end method
+
+.method public static k(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+
+    if-eqz p0, :cond_fallback
+
+    :try_start_0
+    const-string v0, "thumbnail"
+
+    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    if-nez v0, :cond_check_thumb
+
+    const-string v0, "thumbnailRenderer"
+
+    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    :cond_check_thumb
+    if-eqz v0, :cond_fallback
+
+    const-string v1, "musicThumbnailRenderer"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-nez v1, :cond_check_cropped
+
+    const-string v1, "croppedSquareThumbnailRenderer"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    :cond_check_cropped
+    if-nez v1, :cond_check_animated
+
+    const-string v1, "musicAnimatedThumbnailRenderer"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_fallback
+
+    const-string v1, "backupRenderer"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    :cond_check_animated
+    if-eqz v1, :cond_fallback
+
+    const-string v0, "thumbnail"
+
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_fallback
+
+    const-string v1, "thumbnails"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_fallback
+
+    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
+
+    move-result v1
+
+    if-lez v1, :cond_fallback
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_fallback
+
+    const-string v1, "url"
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_fallback
+
+    invoke-static {v0}, Lj6/f;->i0(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_fallback
+
+    return-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_fallback
+    if-eqz p1, :cond_empty
+
+    invoke-static {p1}, Lj6/f;->i0(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_empty
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "https://i.ytimg.com/vi/"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/hqdefault.jpg"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_empty
+    const-string v0, ""
+
+    return-object v0
 .end method
